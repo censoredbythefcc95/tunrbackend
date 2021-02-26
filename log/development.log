@@ -28,3 +28,52 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 18ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 3962)
 
 
+  [1m[36mSong Load (1.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2021-02-26 14:24:52 -0500
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stevenyoung/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stevenyoung/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.7ms | Allocations: 361)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 2821)
+
+
+Started GET "/" for ::1 at 2021-02-26 14:24:57 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stevenyoung/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stevenyoung/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.3ms | Allocations: 181)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 838)
+
+
+Started GET "/somedata" for ::1 at 2021-02-26 14:24:57 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/somedata"):
+  
+Started GET "/favicon.ico" for ::1 at 2021-02-26 14:24:57 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/songs" for ::1 at 2021-02-26 14:24:57 -0500
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (7.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/songs_controller.rb:8:in `index'
+Completed 200 OK in 31ms (Views: 7.5ms | ActiveRecord: 21.4ms | Allocations: 5187)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-02-26 14:24:57 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/songs/1" for ::1 at 2021-02-26 14:25:01 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:45:in `set_song'
+  [1m[36mCACHE Song Load (0.0ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:13:in `show'
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 2.5ms | Allocations: 1656)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-02-26 14:25:01 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  

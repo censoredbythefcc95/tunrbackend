@@ -5,12 +5,13 @@ class SongsController < ApplicationController
   def index
     @songs = Song.all
 
-    render json: @songs
+    render json: @songs, status: 200
   end
 
   # GET /songs/1
   def show
-    render json: @song
+    @song = Song.find(params[:id])
+    render json: @song, status: 200
   end
 
   # POST /songs
